@@ -68,6 +68,7 @@ elif page == "Preview Campaigns":
         for i, df in enumerate(st.session_state['dataframes']):
             filtered_df = df[df['Category'].isin(selected_categories)]
             st.subheader(f"Data for {(st.session_state['dates'][i]).strftime('%d-%m-%Y')}")
+            st.dataframe(filtered_df, use_container_width=True)
     else:
         st.warning("Please import files first from the 'Import File' tab.")
 
@@ -85,7 +86,7 @@ elif page == "Bảng đối chiếu":
 
             if comparison_rows:
                 result_df = pd.concat(comparison_rows).sort_values(by='Date')
-                st.dataframe(result_df)
+                st.dataframe(result_df, use_container_width=True)
 
                 # Line chart default: Impressions + Viewable impressions
                 st.subheader("Biểu đồ chỉ số theo ngày")
