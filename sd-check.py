@@ -33,6 +33,7 @@ def extract_columns(data):
     return extracted_data
 
 # UI Layout
+st.set_page_config(page_title="SD Check App", layout="wide")
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Import File", "Preview Campaigns", "Bảng đối chiếu"])
 
