@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 def extract_columns(data):
     columns_to_extract = [
         'Campaigns', 'Status', 'Start date', 'Portfolio', 'Budget(USD)',
-        'Impressions', 'Clicks', 'Spend(USD)', 'CPC(USD)', 'Orders', 'ACOS',
+        'Impressions', 'Clicks', 'DPV', 'Spend(USD)', 'CPC(USD)', 'Orders', 'ACOS',
         'Viewable impressions'
     ]
     extracted_data = data[columns_to_extract].copy()
